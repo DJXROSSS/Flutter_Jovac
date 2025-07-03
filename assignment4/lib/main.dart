@@ -40,6 +40,7 @@ class myApp extends StatefulWidget {
 }
 
 class _myAppState extends State<myApp> {
+
   int _count = 0;
   void incrementCounter(){
     _count++;
@@ -61,8 +62,9 @@ class _myAppState extends State<myApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Assignment 4',
+      theme: ThemeData.from(colorScheme: ColorScheme.dark()) ,
       home: Scaffold(
-        backgroundColor: Color(0xFF121714),
+        // backgroundColor: Color(0xFF121714),
         body: SafeArea(
           top: true,
           child: SingleChildScrollView(
@@ -78,7 +80,7 @@ class _myAppState extends State<myApp> {
                       'Interactive Demo',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.white,
+                        // color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -87,7 +89,7 @@ class _myAppState extends State<myApp> {
                   Text(
                     'Counter',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
@@ -95,14 +97,14 @@ class _myAppState extends State<myApp> {
                   Text(
                     'Tap the button to increment the counter.',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                     ),
                   ),
                   SizedBox(height: 2,),
                   Text(
                     'Count: $_count',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                     ),
                   ),
                   SizedBox(height: 5,),
@@ -114,9 +116,9 @@ class _myAppState extends State<myApp> {
                           incrementCounter();
                         });
                       },
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateColor.resolveWith((states) => Color(0xFF94e0b2),)
-                      ),
+                      // style: ButtonStyle(
+                      //   backgroundColor: WidgetStateColor.resolveWith((states) => Color(0xFF94e0b2),)
+                      // ),
                       child: Text(
                         'Increment',
                       ),
@@ -126,7 +128,7 @@ class _myAppState extends State<myApp> {
                   Text(
                     'Toggle Visibility',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
@@ -134,14 +136,14 @@ class _myAppState extends State<myApp> {
                   Text(
                     'Toggle the visibility of the widget below.',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                     ),
                   ),
                   SizedBox(height: 5,),
                   SwitchListTile(
                     title: Text('Show Widget',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                     ),),
                     value: _isChecked,
                     onChanged: (value) => setState(() {
@@ -162,7 +164,7 @@ class _myAppState extends State<myApp> {
                   Text(
                     'Task List',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
@@ -170,7 +172,7 @@ class _myAppState extends State<myApp> {
                   Text(
                     'Mark tasks as completed by checking the boxes',
                     style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                     ),
                   ),
                   TaskItem(task: "Task 1: Buy groceries"),
